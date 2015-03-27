@@ -1,0 +1,284 @@
+body {
+  background: #263238;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.main {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #CFD8DC;
+  border-radius: 4px;
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.5);
+}
+.main b {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  border: 3px solid #90A4AE;
+  max-width: 600px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.pidentry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  width: 200px;
+  border-radius: 6px;
+  border: 0;
+  padding: 12px;
+  text-align: center;
+}
+.pidentry:focus {
+  outline: none;
+  box-shadow: 0 0 5px #0091EA;
+}
+
+.sgatrb {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 80%;
+  padding: 6px 8px 3px;
+  text-decoration: none;
+  color: #263238;
+}
+.sgatrb span {
+  font-weight: normal;
+  padding: 0 0.08em;
+  opacity: 0.5;
+}
+
+.spr-container-sounds > :nth-child(2)::before {
+  display: block;
+  content: 'Long sounds might not load properly; this is a problem in chrome with my proxy, not s[cr|n]atch.';
+  padding: 12px 12px 0;
+  font-style: italic;
+  font-size: 50%;
+  opacity: 50%;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(69, 90, 100, 0.4);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.sb2 .cwrap, .sb2 .cwrap .cmouth {
+  background: transparent;
+}
+
+.spr-fail {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 40px);
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  text-align: center;
+  color: red;
+}
+
+.spr-tabs {
+  width: 100%;
+  display: block;
+}
+
+.spr-tab {
+  display: inline-block;
+  margin: 0 4px;
+}
+.spr-tab a {
+  font-size: 80%;
+  display: inline-block;
+  padding: 6px 8px 3px;
+  text-decoration: none;
+  color: #263238;
+  transition: 250ms ease;
+}
+.spr-tab a:hover {
+  text-decoration: underline;
+  color: #37474F;
+  background: #B0BEC5;
+}
+.spr-tab.spr-tab-active a {
+  color: #B0BEC5;
+  background: #37474F;
+}
+
+.spr-select {
+  position: absolute;
+  padding: 8px 20px;
+  border: none;
+  background: none;
+  color: #F57C00;
+  right: 6px;
+  bottom: 6px;
+  font-size: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.spr-select:hover, .spr-select:focus {
+  background: rgba(0, 0, 0, 0.05);
+  color: #E65100;
+  outline: 0;
+}
+.spr-select:disabled {
+  cursor: not-allowed;
+  background: none;
+  opacity: 0.25;
+}
+
+.spr-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 50px);
+  background: #B0BEC5;
+  border: solid #37474F;
+  border-width: 2px 0;
+}
+
+.spr-tabs ~ .spr-container {
+  height: calc(100% - 70px);
+}
+
+.spr-col2, .spr-col3 {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  vertical-align: top;
+}
+.spr-col2:not(:last-of-type), .spr-col3:not(:last-of-type) {
+  border-right: 2px dashed #37474F;
+}
+
+.spr-col2 {
+  width: 50%;
+}
+
+.spr-col3 {
+  width: 33%;
+}
+.spr-col3:first-child {
+  width: 32%;
+}
+
+.spr-grid {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spr-griditem {
+  display: inline-block;
+  background: #CFD8DC;
+  color: #37474F;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  border: 3px solid #90A4AE;
+  cursor: pointer;
+  transition: .25s ease;
+  overflow: auto;
+  max-width: calc(100% - 46px);
+}
+.spr-griditem:hover {
+  background: #90A4AE;
+  border-color: #78909C;
+}
+.spr-griditem img {
+  width: 72px;
+  height: 72px;
+  margin: auto;
+}
+.spr-griditem span {
+  display: block;
+  text-align: center;
+  font-size: 70%;
+  width: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spr-container-sounds .spr-col3:nth-child(2) .spr-griditem audio {
+  width: 200px;
+  background-color: 5px;
+}
+.spr-container-sounds .spr-col3:nth-child(2) .spr-griditem audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+.spr-container-sounds .spr-col3:nth-child(2) .spr-griditem audio::-webkit-media-controls-volume-slider {
+  display: none;
+}
+.spr-container-sounds .spr-col3:nth-child(2) .spr-griditem span {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.spr-griditem-active, .spr-griditem-active:hover {
+  background: #607D8B;
+  border-color: #455A64;
+  color: #CFD8DC;
+}
+
+.spr-preview img {
+  box-sizing: border-box;
+  display: block;
+  max-width: calc(100% - 24px);
+  max-height: 50%;
+  margin: 12px auto;
+  text-align: center;
+  border: 3px solid #CFD8DC;
+  background: white;
+  border-radius: 3px;
+}
+.spr-preview img:hover {
+  background: black;
+}
+.spr-preview audio {
+  display: block;
+  margin: 12px auto;
+  text-align: center;
+  width: calc(100% - 40px);
+}
+.spr-preview audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+.spr-preview audio::-webkit-media-controls-volume-slider {
+  display: none;
+}
+.spr-preview span {
+  display: block;
+  font-size: 150%;
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 30px;
+}
+.spr-preview .spr-scratchblocks {
+  margin-left: 12px;
+}
