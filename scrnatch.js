@@ -36,8 +36,8 @@
           scratchblocks_pre: 'spr-scratchblocks'
         },
         proxy: [
-          'http://sap.x10.mx/',
-          '/'
+          'https://cdn.assets.scratch.mit.edu/internalapi/asset/',
+          '/get/'
         ]
       }, options);
 
