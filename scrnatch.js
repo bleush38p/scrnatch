@@ -36,8 +36,8 @@
           scratchblocks_pre: 'spr-scratchblocks'
         },
         proxy: [
-          'http://sap.x10.mx/',
-          '/'
+          'https://cdn.assets.scratch.mit.edu/internalapi/asset/',
+          '/get/'
         ]
       }, options);
 
@@ -61,7 +61,7 @@
     function fetchProject(id) {
       return new Promise(function(resolve, reject) {
       try{$.getJSON(
-        'http://projects.scratch.mit.edu/internalapi/project/' + id + '/get/0'
+        'https://projects.scratch.mit.edu/internalapi/project/' + id + '/get/0'
       ).done(resolve).fail(function () {
         reject('Error: $.getJSON error. [Check the project id.]');
       });
